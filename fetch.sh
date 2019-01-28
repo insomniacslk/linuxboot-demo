@@ -2,6 +2,10 @@
 
 git clone https://review.coreboot.org/coreboot.git
 cp coreboot-config coreboot/.config
+(
+    cd coreboot
+    git checkout tags/4.9
+)
 
 wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.6.tar.xz
 tar xvJf linux-4.19.6.tar.xz
