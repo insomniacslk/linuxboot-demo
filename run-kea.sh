@@ -9,6 +9,11 @@ if [ ! -d kea ]
 then
     mkdir kea
 fi
+if [ ! -d /var/run/kea ]
+then
+    mkdir /var/run/kea
+fi
+
 ip6tables -P INPUT ACCEPT
 iptables -P INPUT ACCEPT
 sudo kea-dhcp6 -c kea6.conf -d
