@@ -13,6 +13,7 @@ qemu-system-x86_64 \
     -m 1024 \
     -enable-kvm \
     -nographic \
+    -hda disk.img \
     -net bridge,br=virbr1 \
     -net nic -net bridge,br=virbr1 \
     $@
