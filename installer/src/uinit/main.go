@@ -11,4 +11,5 @@ var banner = ("            _       _           _        _ _           \n" +
 func main() {
 	fmt.Println(banner)
 	fmt.Println("I am not really a net installer, I'm here just to prove the point.")
+	fmt.Println()
 }
