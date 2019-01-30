@@ -1,3 +1,6 @@
 .*.swp
 kea/dhcp6.leases
 server/server
+coreboot/
+linux-4.19.6
+linux-4.19.6.tar.xz

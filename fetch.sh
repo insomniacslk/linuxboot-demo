@@ -1,13 +1,23 @@
 #!/bin/bash -exu
 
-git clone https://review.coreboot.org/coreboot.git
-cp coreboot-config coreboot/.config
-(
-    cd coreboot
-    git checkout tags/4.9
-)
+get_coreboot() {
+    git clone https://review.coreboot.org/coreboot.git
+    cp coreboot-config coreboot/.config
+    (
+        cd coreboot
+        git checkout tags/4.9
+    )
+}
 
-wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.19.6.tar.xz
-tar xvJf linux-4.19.6.tar.xz
-cp linux-config linux-4.19.6/.config
+KERNEL_VER=4.19.6
+#KERNEL_VER=4.14.96
 
+get_kernel() {
+    wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-${KERNEL_VER}.tar.xz
+    tar xvJf linux-${KERNEL_VER}.tar.xz
+    cp linux-config linux-${KERNEL_VER}/.config
+}
+
+
+#get_coreboot
+get_kernel
